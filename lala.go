@@ -88,7 +88,7 @@ func sendJSONResponse(w http.ResponseWriter, statusCode int, data ResponsePayloa
 }
 
 func connectDB() *gorm.DB {
-	dsn := "host=localhost user=postgres password=Fydfhniga2 dbname=userdatago port=5432 sslmode=disable"
+	dsn := "host=localhost user=postgres password=1234 dbname=userdatago port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("Ошибка подключения к базе данных: %v", err)
