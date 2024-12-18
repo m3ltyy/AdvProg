@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golang Server Interaction</title>
+    <style>
+        .error-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f44336;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Golang Server Interaction</h1>
+    <button id="getButton">GET Request</button>
+    <button id="postButton">POST Request</button>
+    <input type="text" id="postInput" placeholder="Enter message for POST request">
+    <h2>Response:</h2>
+    <table id="responseTable" border="1">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="errorPopup" class="error-popup"></div>
+    <script>
+        const getButton = document.getElementById("getButton");
+        const postButton = document.getElementById("postButton");
+        const postInput = document.getElementById("postInput");
+        const responseTable = document.getElementById("responseTable").getElementsByTagName("tbody")[0];
+        const errorPopup = document.getElementById("errorPopup");
+
+        // Function to handle GET request
+        getButton.addEventListener("click", async () => {
+            try {
+                const response = await fetch("http://localhost:3000/get");
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.message || "Error occurred");
+                addResponseToTable(data);
+            } catch (error) {
+                showError(error.message);
+            }
+        });
+
+        // Function to handle POST request
+        postButton.addEventListener("click", async () => {
+            const message = postInput.value;
+            try {
+                const response = await fetch("http://localhost:3000/post", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message }),
+                });
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.message || "Error occurred");
+                addResponseToTable(data);
+            } catch (error) {
+                showError(error.message);
+            }
+        });
+
+        // Function to add a response to the table
+        function addResponseToTable(data) {
+            const row = responseTable.insertRow();
+            row.insertCell(0).textContent = data.status;
+            row.insertCell(1).textContent = data.message;
+        }
+
+        // Function to show error popup
+        function showError(message) {
+            errorPopup.textContent = `Error: ${message}`;
+            errorPopup.style.display = "block";
+            setTimeout(() => {
+                errorPopup.style.display = "none";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
