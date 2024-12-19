@@ -21,6 +21,8 @@ Postman
 
 5.For post method go to “body” and write our JSON message, select post method and send message.
 
+
+
 Site
 
 1.Open lala.go through terminal and run it
@@ -31,6 +33,7 @@ Site
 
 4. All methods and their messages are recorded in a table
    
+
 
 Database
 
