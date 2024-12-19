@@ -9,9 +9,26 @@ Screenshot of our site(not main FrontEnd site):
 
 How to run server:
 
-Task 1: 
-Download lala.go and open in VSCode for instance. Run server by using terminal (go run lala.go). Use Postman to get POST and GET. (localhost:8080/post or localhost:8080/get)
+Postman
+1. Open lala.go through terminal and run it
+2. Open postman
+3.Through postman we make requests or receive responses by inserting our localhost link beforehand.
+4.For the get method we simply select the get method and send a get message.
+5.For post method go to “body” and write our JSON message, select post method and send message.
 
+Site
+1.Open lala.go through terminal and run it
+2.Go to the link
+3.And already directly with buttons and fields can make the same requests and receive messages
+4. All methods and their messages are recorded in a table
+
+Database
+1.Open via terminal lala.go
+2.Enter your db data in connectDB
+3.Write the functions of interest to work with DB
+4.Start the server
+5.Check the presence of the table and the entered data.
+P.s. Automigration will work on our site, which performs the check and creation of the required DB table, be sure not to forget to change the dsn line to enter your data on the type of password, user, database name.
 
 Instruments/Programms/Git's/Framework's that we used: 
 
