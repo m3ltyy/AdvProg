@@ -1,9 +1,8 @@
 # LinkSphere project
-Project's goals:
+LinkSphere - worldwide online e-shop. We introduce only advanced devices.
 Working on this project: Anvar Tamabayev & Danial Sultanbek.
 Screenshot of our site:
-How to run server:
-.
-.
-.
-We used: VSCode, PostGreSQL, Postman
+How to run server (1st Task):
+
+
+Programms that we used: VSCode, PostGreSQL, Postman
