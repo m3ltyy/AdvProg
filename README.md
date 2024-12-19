@@ -5,7 +5,7 @@ Working on this project: Anvar Tamabayev & Danial Sultanbek.
 
 Screenshot of our site:
 
-How to run server (1st Task):
-
+How to run server:
+Task 1:
 
 Programms that we used: VSCode, PostGreSQL, Postman
