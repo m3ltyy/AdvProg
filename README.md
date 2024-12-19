@@ -10,6 +10,7 @@ Screenshot of our site(not main FrontEnd site):
 How to run server:
 
 Postman
+
 1. Open lala.go through terminal and run it
 2. Open postman
 3.Through postman we make requests or receive responses by inserting our localhost link beforehand.
@@ -17,12 +18,14 @@ Postman
 5.For post method go to “body” and write our JSON message, select post method and send message.
 
 Site
+
 1.Open lala.go through terminal and run it
 2.Go to the link
 3.And already directly with buttons and fields can make the same requests and receive messages
 4. All methods and their messages are recorded in a table
 
 Database
+
 1.Open via terminal lala.go
 2.Enter your db data in connectDB
 3.Write the functions of interest to work with DB
