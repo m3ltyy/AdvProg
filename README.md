@@ -12,6 +12,7 @@ Download lala.go and open in VSCode for instance. Run server by using terminal (
 
 
 Instruments/Programms/Git's/Framework's that we used: 
+
 VSCode, PostGreSQL, Postman. 
 github.com/golang-migrate/migrate/v4
 github.com/hashicorp/errwrap
