@@ -3,7 +3,9 @@ LinkSphere - worldwide online e-shop. We introduce only advanced devices.
 
 Working on this project: Anvar Tamabayev & Danial Sultanbek.
 
-Screenshot of our site:
+Screenshot of our site(not main FrontEnd site):
+![image](https://github.com/user-attachments/assets/4e8b3fd8-cd79-4e50-a6f1-fdee0dd42cae)
+
 
 How to run server:
 
